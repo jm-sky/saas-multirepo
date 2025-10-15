@@ -1,0 +1,72 @@
+services:
+  # backend:
+  #   build:
+  #     context: ./backend
+  #     dockerfile: Dockerfile.dev
+  #   container_name: saas_multirepo-backend
+  #   restart: unless-stopped
+  #   environment:
+  #     - DATABASE_URL=postgresql://${DB_USER:-saas_multirepo}:${DB_PASSWORD:-saas_multirepo_pass}@db:5432/${DB_NAME:-saas_multirepo}
+  #     - REDIS_URL=redis://redis:6379/0
+  #     - MINIO_ENDPOINT=minio:9000
+  #     - MINIO_ACCESS_KEY=${MINIO_ROOT_USER:-minioadmin}
+  #     - MINIO_SECRET_KEY=${MINIO_ROOT_PASSWORD:-minioadmin}
+  #     - ENVIRONMENT=development
+  #     - DEBUG=true
+  #   ports:
+  #     - "${BACKEND_PORT:-8000}:8000"
+  #   volumes:
+  #     - ./backend:/app
+  #   depends_on:
+  #     db:
+  #       condition: service_healthy
+  #     redis:
+  #       condition: service_healthy
+  #     minio:
+  #       condition: service_healthy
+  #   healthcheck:
+  #     test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 3
+
+  db:
+    image: postgres:15-alpine
+    container_name: saas_multirepo-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USER:-saas_multirepo}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-saas_multirepo_pass}
+      POSTGRES_DB: ${DB_NAME:-saas_multirepo}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-saas_multirepo}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: saas_multirepo-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  default:
+    name: saas_multirepo-network

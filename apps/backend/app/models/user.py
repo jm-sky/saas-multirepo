@@ -36,7 +36,7 @@ class User(Base):
     reset_token = Column(Text, nullable=True)
     reset_token_expiry = Column(DateTime(timezone=True), nullable=True)
 
-    # Business model: CareerHub tiers
+    # Business model: SaasMultirepo tiers
     tier = Column(String(20), default="free", nullable=False)  # free, pro, expert
 
     # User settings (JSONB for flexibility)

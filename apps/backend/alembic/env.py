@@ -12,8 +12,8 @@ from pathlib import Path
 # Add parent directory to path to import app modules
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-from app.core.config import settings  # noqa: E402
-from app.core.database import Base  # noqa: E402
+from app.settings import settings  # noqa: E402
+from app.database import Base  # noqa: E402
 
 # Import all models to ensure they're registered with Base.metadata
 

@@ -1,12 +1,14 @@
 // Authentication types matching backend schemas (camelCase)
 
+export type TTier = "free" | "pro" | "expert";
+
 export interface User {
   id: string;
   email: string;
   name: string;
   isActive: boolean;
   createdAt: string;
-  tier: string; // CareerHub: free, pro, expert
+  tier: TTier;
 }
 
 export interface LoginRequest {

@@ -6,14 +6,14 @@ from fastapi_core import BaseSettings
 
 class Settings(BaseSettings):
     """
-    Application settings for CareerHub backend.
+    Application settings for SaasMultirepo backend.
 
-    Extends fastapi-core BaseSettings with CareerHub-specific configuration.
+    Extends fastapi-core BaseSettings with SaasMultirepo-specific configuration.
     All core settings (app, server, security, rate_limit, database, redis,
     recaptcha, google_oauth) are inherited from BaseSettings.
     """
 
-    # Legacy field for backward compatibility with CareerHub
+    # Legacy field for backward compatibility with SaasMultirepo
     frontend_url: str = Field(
         default="http://localhost:3000",
         validation_alias="FRONTEND_URL",

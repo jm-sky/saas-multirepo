@@ -1,4 +1,4 @@
-"""CareerHub API - Professional Profile Management Platform."""
+"""SaasMultirepo API - Professional Profile Management Platform."""
 
 from fastapi_core import create_app
 from app.settings import settings
@@ -11,7 +11,7 @@ app = create_app(
 )
 
 # Override app metadata
-app.title = "CareerHub API"
+app.title = "SaasMultirepo API"
 app.description = "Professional Profile Management Platform"
 
 
@@ -20,7 +20,7 @@ app.description = "Professional Profile Management Platform"
 async def root():
     """Root endpoint - API information."""
     return {
-        "message": "Welcome to CareerHub API",
+        "message": "Welcome to SaasMultirepo API",
         "version": settings.app.version,
         "docs": "/docs",
         "health": "/health",

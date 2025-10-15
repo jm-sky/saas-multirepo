@@ -57,7 +57,7 @@ export default function HomePage() {
               Professional Profile Management
             </h2>
             <p className="text-xl text-gray-600">
-              Create tailored CVs, manage your experience, and showcase your professional journey with CareerHub
+              Create tailored CVs, manage your experience, and showcase your professional journey with SaasMultirepo
             </p>
           </div>
 

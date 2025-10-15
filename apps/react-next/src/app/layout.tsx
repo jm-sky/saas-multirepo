@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CareerHub - Professional Profile Management",
+  title: "SaasMultirepo - Professional Profile Management",
   description: "Manage your professional profile, create tailored CVs, and showcase your experience",
 };
 

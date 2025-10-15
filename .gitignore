@@ -35,7 +35,7 @@ Thumbs.db
 # Uncomment these if you don't want to track project instances in this repo
 # jira-integration/
 # azure-document-ai/
-# careerhub-resume/
+# saas_multirepo-resume/
 
 # But DO track the template/boilerplate if it exists
 !saas-fastapi-template/

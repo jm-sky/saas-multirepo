@@ -11,3 +11,9 @@ python-ulid==2.2.0
 
 # ASGI Server
 uvicorn[standard]==0.24.0
+
+# Other
+itsdangerous==2.1.2
+redis==5.0.1
+httpx==0.27.0
+authlib==1.3.0
