@@ -1,0 +1,29 @@
+{
+  "name": "saas-multirepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Management repository for FastAPI and frontend core functionality",
+  "workspaces": [
+    "fastapi-core",
+    "react-core",
+    "vue-core",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:backend": "cd apps/backend && uvicorn app.main:app --reload --host 0.0.0.0 --port 8000",
+    "dev:react": "cd apps/react-next && pnpm dev",
+    "dev:vue": "cd apps/vue-vite && pnpm dev",
+    "dev:all": "npm-run-all -p dev:backend dev:react dev:vue",
+    "install:backend": "cd apps/backend && pip install -r requirements.txt",
+    "install:all": "pnpm install && pnpm install:backend"
+  },
+  "devDependencies": {
+    "npm-run-all2": "^8.0.4"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0",
+    "pnpm": ">=10.0.0"
+  },
+  "packageManager": "pnpm@10.11.0"
+}
+

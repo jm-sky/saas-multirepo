@@ -1,0 +1,40 @@
+{
+  "name": "vue-core",
+  "version": "0.1.0",
+  "description": "Reusable core functionality for Vue 3 applications with TypeScript, TanStack Query, and authentication",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "private": true,
+  "scripts": {
+    "type-check": "vue-tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "peerDependencies": {
+    "@tanstack/vue-query": "^5.0.0",
+    "axios": "^1.0.0",
+    "vue": "^3.5.0",
+    "zod": "^3.24.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.14"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.10",
+    "eslint": "^9.33.0",
+    "typescript": "^5.9.0",
+    "vue-tsc": "^3.1.0"
+  },
+  "keywords": [
+    "vue",
+    "typescript",
+    "tanstack-query",
+    "authentication",
+    "axios"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

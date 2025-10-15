@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv
+*.db
+
+# Node
+node_modules/
+dist/
+build/
+.next/
+
+# Environment
+.env
+.env.local
+*.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific - exclude actual project directories (if you want)
+# Uncomment these if you don't want to track project instances in this repo
+# jira-integration/
+# azure-document-ai/
+# careerhub-resume/
+
+# But DO track the template/boilerplate if it exists
+!saas-fastapi-template/

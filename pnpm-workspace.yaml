@@ -1,0 +1,6 @@
+packages:
+  - 'fastapi-core'
+  - 'react-core'
+  - 'vue-core'
+  - 'apps/*'
+

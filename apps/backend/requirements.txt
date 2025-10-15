@@ -1,0 +1,13 @@
+# Core framework (includes FastAPI, Pydantic, JWT, Redis, OAuth, etc.)
+../../fastapi-core
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.13.1
+psycopg2-binary==2.9.9
+
+# ULID for sortable IDs
+python-ulid==2.2.0
+
+# ASGI Server
+uvicorn[standard]==0.24.0
