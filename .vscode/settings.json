@@ -1,0 +1,21 @@
+{
+  "git.detectSubmodules": true,
+  "git.detectSubmodulesLimit": 10,
+  "git.autoRepositoryDetection": true,
+  "gitLens.views.repositories.location": "scm",
+  "gitLens.views.fileHistory.location": "explorer",
+  "gitLens.views.lineHistory.location": "scm",
+  "gitLens.views.compare.location": "scm",
+  "gitLens.views.search.location": "scm",
+  "gitLens.statusBar.enabled": true,
+  "gitLens.statusBar.pullRequests.enabled": true,
+  "gitLens.statusBar.issues.enabled": true,
+  "gitLens.blame.compact": true,
+  "gitLens.blame.heatmap.enabled": true,
+  "gitLens.currentLine.enabled": true,
+  "gitLens.hovers.currentLine.over": "line",
+  "gitLens.codeLens.enabled": true,
+  "gitLens.codeLens.authors.enabled": true,
+  "gitLens.codeLens.recentChange.enabled": true,
+  "gitLens.codeLens.scm.enabled": true
+}

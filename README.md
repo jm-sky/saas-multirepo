@@ -42,21 +42,21 @@ pnpm dev:vue      # Vue Vite on http://localhost:5173
 ```bash
 # FastAPI Core
 cd fastapi-core
-git remote add origin git@github.com:yourusername/fastapi-core.git
+git remote add origin git@github.com:yourusername/saas-fastapi-core.git
 git add .
 git commit -m "Initial commit"
 git push -u origin main
 
 # React Core
 cd ../react-core
-git remote add origin git@github.com:yourusername/react-core.git
+git remote add origin git@github.com:yourusername/saas-react-core.git
 git add .
 git commit -m "Initial commit"
 git push -u origin main
 
 # Vue Core (when ready)
 cd ../vue-core
-git remote add origin git@github.com:yourusername/vue-core.git
+git remote add origin git@github.com:yourusername/saas-vue-core.git
 git add .
 git commit -m "Initial commit"
 git push -u origin main
